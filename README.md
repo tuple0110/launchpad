@@ -60,8 +60,59 @@
 </html>
 ```
 > * CSS
-> * JS
+[Eric Meyer's reset.css](https://meyerweb.com/eric/tools/css/reset/reset.css)
+```css
+td {
+  width: 150px;
+  height: 160px;
+  border-radius: 15%;
+  background-color: silver;
+  color: gold;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 50px;
+}
+table,td {
+  border: 1px solid black;
+}
+table {
+  background-color: blue;
+  border-radius: 5%;
+  border-spacing: 30px;
+  margin: auto;
+}
+h2 {
+  font-size: 0.3em;
+  color: black;
+}
 
+```
+> * JS
+```js
+var launchpad = document.getElementsByTagName("table")[0];
+var launchpadButtonRaw = document.getElementsByTagName("td");
+var launchpadButton = []
+for (var i = 0; i < 9; i++) {
+  launchpadButton.push(launchpadButtonRaw[i]);
+}
+var audio = ["crash", "open_hihat", "close_hihat", "snare", "tomtom", "big_tomtom", "ride",
+ "kick", "floor_tomtom"];
+var keys = [36, 38, 33, 37, 12, 39, 35, 40, 34];
+
+launchpad.addEventListener("click", e => {
+  var sound = audio[launchpadButton.indexOf(e.target)];
+  console.log(sound);
+  new Audio("audio/" + sound + ".mp3").play();
+  e.target.style.backgroundColor = "gray";
+  setTimeout(function(){
+    e.target.style.backgroundColor = "silver";
+  }, 100)
+});
+
+addEventListener("keydown", e => {
+  launchpadButton[keys.indexOf(e.keyCode)].click();
+});
+```
 > ## How To Use
 > * Play it with mouse click <br>
 > * Play it with numpad
