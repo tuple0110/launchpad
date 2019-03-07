@@ -1,7 +1,7 @@
 # Launchpad
 > ## Code
 > * HTML
-> ```html
+```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
