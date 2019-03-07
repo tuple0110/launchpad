@@ -59,7 +59,7 @@
   </body>
 </html>
 ```
-> * CSS
+> * CSS <br>
 [Eric Meyer's reset.css](https://meyerweb.com/eric/tools/css/reset/reset.css)
 ```css
 td {
