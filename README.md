@@ -1,4 +1,5 @@
 # Launchpad
+초딩 때 만든 웹 런치패드. 넘패드로 사용가능
 ## Code
 * HTML
 ```html
